@@ -1,8 +1,9 @@
 export default function Home() {
   return (
-    <main>
+    <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
       <h1>Sunray</h1>
-      <p>Solana analytics and launch platform.</p>
+      <p>The platform is live.</p>
     </main>
   );
 }
+
