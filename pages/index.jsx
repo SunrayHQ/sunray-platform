@@ -3,35 +3,63 @@ export default function Home() {
     <div style={{ fontFamily: "Arial, sans-serif", color: "#111" }}>
 
       {/* Header */}
-      <header style={{ padding: "24px", borderBottom: "1px solid #eee" }}>
-        <h1>Sunray ☀️</h1>
+      <header style={{ padding: "24px", borderBottom: "1px solid #eee", textAlign: "center" }}>
+        <h1 style={{ fontSize: "2.5rem", margin: 0 }}>Sunray ☀️</h1>
+        <p style={{ color: "#666", margin: "8px 0 0" }}>
+          Solana On-Chain Insight & Analytics
+        </p>
       </header>
 
       {/* Hero */}
-      <section style={{ padding: "80px 24px", textAlign: "center" }}>
-        <h2>Solana Transparency, Simplified</h2>
-        <p style={{ maxWidth: "600px", margin: "16px auto" }}>
-          Sunray is a clean, fast platform for tracking on-chain activity,
-          early momentum, and launch analytics — built for the Solana ecosystem.
+      <section style={{ padding: "80px 24px", textAlign: "center", background: "#fafafa" }}>
+        <h2 style={{ fontSize: "2rem", marginBottom: "16px" }}>
+          Transparency, Speed & Clarity
+        </h2>
+        <p style={{ maxWidth: "680px", margin: "0 auto", fontSize: "1.125rem", color: "#444" }}>
+          Sunray is a Solana-native platform for real-time token activity, wallet tracking,
+          momentum signals, and launch analytics — all in one clean dashboard.
         </p>
       </section>
 
       {/* Features */}
       <section style={{ padding: "40px 24px" }}>
-        <h3>Core Features</h3>
-        <ul>
-          <li>Real-time token activity</li>
-          <li>Wallet & liquidity insights</li>
-          <li>Early momentum signals</li>
-          <li>pump.fun launch support</li>
+        <h3 style={{ fontSize: "1.75rem", marginBottom: "12px", textAlign: "center" }}>
+          What You Get
+        </h3>
+        <ul style={{ maxWidth: "720px", margin: "0 auto 40px", listStyle: "none", padding: 0 }}>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Live token activity and trends</li>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Wallet insights & behavior tracking</li>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Momentum & signal discovery</li>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• pump.fun launch integration support</li>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Optimized for Solana speed and scale</li>
         </ul>
       </section>
 
+      {/* Call to Action */}
+      <section style={{ textAlign: "center", padding: "40px 24px" }}>
+        <a
+          href="#"
+          style={{
+            display: "inline-block",
+            background: "#ffcc00",
+            color: "#111",
+            padding: "14px 28px",
+            borderRadius: "8px",
+            fontSize: "1.15rem",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          Explore Platform Soon
+        </a>
+      </section>
+
       {/* Footer */}
-      <footer style={{ padding: "24px", borderTop: "1px solid #eee" }}>
+      <footer style={{ padding: "24px", borderTop: "1px solid #eee", textAlign: "center", color: "#666" }}>
         <p>© {new Date().getFullYear()} Sunray</p>
       </footer>
 
     </div>
   );
 }
+
