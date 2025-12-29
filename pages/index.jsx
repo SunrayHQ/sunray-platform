@@ -30,35 +30,34 @@ export default function Home() {
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Live token activity and trends</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Wallet insights & behavior tracking</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Momentum & signal discovery</li>
-          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• pump.fun launch support</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Optimized for Solana speed and scale</li>
         </ul>
       </section>
 
-      {/* Call to Action */}
-      <section style={{ textAlign: "center", padding: "40px 24px" }}>
-        <a
-          href="#"
-          style={{
-            display: "inline-block",
-            background: "#ffcc00",
-            color: "#111",
-            padding: "14px 28px",
-            borderRadius: "8px",
-            fontSize: "1.15rem",
-            textDecoration: "none",
-            fontWeight: "bold",
-          }}
-        >
-          Explore Sunray
-        </a>
-      </section>
+      {/* Dashboard Preview */}
+      <section style={{
+        padding: "60px 24px",
+        background: "#111",
+        color: "#fff",
+        textAlign: "center"
+      }}>
+        <h3 style={{ fontSize: "1.8rem", marginBottom: "12px" }}>
+          Live Dashboard Preview
+        </h3>
 
-      {/* Footer */}
-      <footer style={{ padding: "24px", borderTop: "1px solid #eee", textAlign: "center", color: "#666" }}>
-        <p>© {new Date().getFullYear()} Sunray</p>
-      </footer>
+        <p style={{
+          maxWidth: "720px",
+          margin: "0 auto",
+          color: "#ccc",
+          fontSize: "1.1rem"
+        }}>
+          Real-time Solana signals, wallet flows, and token momentum —
+          unified into one clean interface.
+        </p>
 
-    </div>
-  );
-}
+        <div style={{
+          marginTop: "32px",
+          background: "#1a1a1a",
+          borderRadius: "12px",
+          paddi
+
