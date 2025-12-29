@@ -55,9 +55,14 @@ export default function Home() {
           unified into one clean interface.
         </p>
 
-        <div style={{
-          marginTop: "32px",
-          background: "#1a1a1a",
-          borderRadius: "12px",
-          paddi
+       <div style={{
+  marginTop: "32px",
+  background: "#1a1a1a",
+  borderRadius: "12px",
+  padding: "32px",
+  maxWidth: "860px",
+  marginLeft: "auto",
+  marginRight: "auto"
+}}>
+
 
