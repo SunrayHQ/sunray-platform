@@ -5,7 +5,7 @@ export default function Home() {
         fontFamily: "Inter, Arial, sans-serif",
         minHeight: "100vh",
         background:
-          "radial-gradient(circle at top, #1e293b 0%, #020617 40%, #020617 100%)",
+          "radial-gradient(circle at top, #1e293b 0%, #020617 45%, #020617 100%)",
         color: "#e5e7eb",
       }}
     >
@@ -26,12 +26,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section
-        style={{
-          padding: "90px 24px",
-          textAlign: "center",
-        }}
-      >
+      <section style={{ padding: "90px 24px", textAlign: "center" }}>
         <h2
           style={{
             fontSize: "2.4rem",
@@ -87,7 +82,7 @@ export default function Home() {
                 backdropFilter: "blur(6px)",
               }}
             >
-              <p style={{ fontSize: "1.05rem", color: "#e5e7eb" }}>{text}</p>
+              <p style={{ fontSize: "1.05rem" }}>{text}</p>
             </div>
           ))}
         </div>
@@ -95,10 +90,8 @@ export default function Home() {
 
       {/* Dashboard Preview */}
       <section
-        style={{
-          padding: "70px 24px",
-          textAlign: "center",
-        }}
+        id="dashboard"
+        style={{ padding: "70px 24px", textAlign: "center" }}
       >
         <h3 style={{ fontSize: "1.9rem", marginBottom: "12px" }}>
           Live Dashboard Preview
@@ -129,7 +122,7 @@ export default function Home() {
       {/* CTA */}
       <section style={{ textAlign: "center", padding: "40px 24px" }}>
         <a
-          href="#"
+          href="#dashboard"
           style={{
             display: "inline-block",
             background:
@@ -160,3 +153,4 @@ export default function Home() {
     </div>
   );
 }
+
