@@ -1,8 +1,17 @@
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Dashboard from "../components/Dashboard";
+import Footer from "../components/Footer";
+
 export default function Home() {
   return (
-    <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
-      <h1>Sunray</h1>
-      <p>The platform is live.</p>
-    </main>
+    <>
+      <Header />
+      <Hero />
+      <Features />
+      <Dashboard />
+      <Footer />
+    </>
   );
 }
