@@ -30,7 +30,7 @@ export default function Home() {
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Live token activity and trends</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Wallet insights & behavior tracking</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Momentum & signal discovery</li>
-          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• pump.fun launch integration support</li>
+          <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• pump.fun launch support</li>
           <li style={{ marginBottom: "12px", fontSize: "1.1rem" }}>• Optimized for Solana speed and scale</li>
         </ul>
       </section>
@@ -50,7 +50,7 @@ export default function Home() {
             fontWeight: "bold",
           }}
         >
-          Explore Platform Soon
+          Explore Sunray
         </a>
       </section>
 
@@ -62,4 +62,3 @@ export default function Home() {
     </div>
   );
 }
-
