@@ -4,54 +4,56 @@ export default function Home() {
       style={{
         minHeight: "100vh",
         background:
-          "radial-gradient(circle at top left, #0f172a, #020617)",
+          "radial-gradient(circle at top, #0f172a 0%, #020617 60%)",
         color: "#e5e7eb",
-        fontFamily: "Inter, sans-serif",
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
         margin: 0,
       }}
     >
-      {/* Hero Section */}
+      {/* HERO */}
       <section
         style={{
           textAlign: "center",
-          padding: "120px 24px 60px",
+          padding: "120px 24px 80px",
         }}
       >
         <h1
           style={{
-            fontSize: "3.5rem",
-            fontWeight: 700,
+            fontSize: "3.75rem",
+            fontWeight: 800,
             margin: "0 auto",
-            maxWidth: "820px",
+            maxWidth: "900px",
             background:
               "linear-gradient(90deg, #facc15, #38bdf8, #22c55e)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            animation: "fadeIn 1s ease-in-out",
           }}
         >
           Sunray ☀️
         </h1>
+
         <p
           style={{
             fontSize: "1.25rem",
             color: "#cbd5f5",
-            marginTop: "12px",
+            marginTop: "16px",
             maxWidth: "720px",
-            margin: "12px auto 0 auto",
+            marginLeft: "auto",
+            marginRight: "auto",
+            lineHeight: 1.6,
           }}
         >
-          Solana-native insight, transparency, and real on-chain clarity —
-          presented in a clean, modern platform built for speed.
+          A Solana-native platform focused on clarity, transparency,
+          and real on-chain insight — built clean, fast, and intentional.
         </p>
 
-        {/* Buttons */}
+        {/* CTA BUTTONS */}
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             gap: "16px",
-            marginTop: "36px",
+            marginTop: "40px",
             flexWrap: "wrap",
           }}
         >
@@ -63,39 +65,39 @@ export default function Home() {
               background:
                 "linear-gradient(90deg, #facc15, #38bdf8)",
               color: "#020617",
-              padding: "14px 34px",
-              borderRadius: "10px",
+              padding: "14px 36px",
+              borderRadius: "12px",
               fontWeight: 700,
               fontSize: "1.05rem",
               textDecoration: "none",
-              boxShadow: "0px 4px 10px rgba(0,0,0,0.3)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
             Follow on X
           </a>
 
           <a
-            href="https://discord.gg/"
+            href="https://x.com/sunrayhq"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              border: "1px solid #334155",
+              border: "1px solid rgba(255,255,255,0.15)",
               color: "#e5e7eb",
-              padding: "14px 34px",
-              borderRadius: "10px",
+              padding: "14px 36px",
+              borderRadius: "12px",
               fontWeight: 700,
               fontSize: "1.05rem",
               textDecoration: "none",
-              background: "#020617",
-              boxShadow: "0px 4px 10px rgba(0,0,0,0.3)",
+              background: "rgba(255,255,255,0.03)",
+              backdropFilter: "blur(6px)",
             }}
           >
-            Join Discord
+            Get Launch Updates
           </a>
         </div>
       </section>
 
-      {/* Section Divider */}
+      {/* DIVIDER */}
       <div
         style={{
           height: "1px",
@@ -104,95 +106,100 @@ export default function Home() {
         }}
       />
 
-      {/* Features */}
+      {/* FEATURES */}
       <section
         style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          padding: "80px 24px",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: "20px",
-          padding: "60px 24px",
-          maxWidth: "1100px",
-          margin: "0 auto",
         }}
       >
         {[
           "Live token activity & trends",
-          "Wallet flow insights",
+          "Wallet flow & behavior insight",
           "Momentum & signal discovery",
-          "Built for Solana speed",
-          "Coming soon: launch analytics",
+          "Built specifically for Solana",
+          "Launch-focused analytics (coming)",
         ].map((text, i) => (
           <div
             key={i}
             style={{
               background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "14px",
-              padding: "24px",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: "16px",
+              padding: "28px",
               textAlign: "center",
-              backdropFilter: "blur(6px)",
+              boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
             }}
           >
-            <p style={{ fontSize: "1.05rem", margin: "0" }}>{text}</p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "1.05rem",
+                color: "#e5e7eb",
+              }}
+            >
+              {text}
+            </p>
           </div>
         ))}
       </section>
 
-      {/* Section Divider */}
-      <div
-        style={{
-          height: "1px",
-          background: "rgba(255,255,255,0.08)",
-          margin: "0 24px",
-        }}
-      />
-
-      {/* Dashboard Preview */}
+      {/* PREVIEW */}
       <section
         style={{
-          padding: "60px 24px",
+          padding: "80px 24px",
           textAlign: "center",
         }}
       >
-        <h3 style={{ fontSize: "1.9rem", marginBottom: "12px" }}>
-          Dashboard Preview
-        </h3>
+        <h2
+          style={{
+            fontSize: "2rem",
+            marginBottom: "12px",
+          }}
+        >
+          Platform Preview
+        </h2>
+
         <p
           style={{
             maxWidth: "720px",
             margin: "0 auto",
             color: "#9ca3af",
-            lineHeight: "1.6",
+            lineHeight: 1.6,
           }}
         >
-          Experience a conceptual view of how insights and real-time signals
-          will appear when the product fully goes live.
+          A conceptual look at how insights and analytics will be presented
+          once Sunray is fully live.
         </p>
 
         <div
           style={{
-            marginTop: "30px",
-            padding: "32px",
+            marginTop: "36px",
             maxWidth: "860px",
             marginLeft: "auto",
             marginRight: "auto",
+            padding: "36px",
+            borderRadius: "18px",
             background:
-              "linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-            border: "1px solid rgba(255,255,255,0.10)",
-            borderRadius: "16px",
-            boxShadow: "0px 4px 14px rgba(0,0,0,0.4)",
+              "linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
+            border: "1px solid rgba(255,255,255,0.12)",
+            boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
           }}
         >
           <p style={{ color: "#9ca3af", margin: 0 }}>
-            Analytics modules initializing…
+            Real-time modules initializing…
           </p>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer
         style={{
-          padding: "28px 24px",
+          padding: "32px 24px",
           textAlign: "center",
           borderTop: "1px solid rgba(255,255,255,0.08)",
           color: "#94a3b8",
