@@ -4,34 +4,34 @@ export default function Home() {
   const [countdown, setCountdown] = useState("");
 
   useEffect(() => {
-    const launchDate = new Date("January 2, 2026 00:00:00").getTime();
+    const launchDate = new Date("January 2, 2026").getTime();
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const diff = launchDate - now;
 
-      if (distance < 0) {
+      if (diff <= 0) {
         setCountdown("Launching Soon");
-        clearInterval(timer);
+        clearInterval(interval);
         return;
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
 
-      setCountdown(`${days}d ${hours}h ${minutes}m`);
+      setCountdown(`${d}d ${h}h ${m}m`);
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div
       style={{
-        fontFamily: "Arial, sans-serif",
-        background: "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
-        color: "#fff",
+        fontFamily: "Inter, Arial, sans-serif",
+        backgroundColor: "#0b0b0b",
+        color: "#f5f5f5",
         minHeight: "100vh",
       }}
     >
@@ -40,110 +40,110 @@ export default function Home() {
         style={{
           padding: "32px",
           textAlign: "center",
-          borderBottom: "1px solid rgba(255,255,255,0.1)",
+          borderBottom: "1px solid #1f1f1f",
         }}
       >
-        <h1 style={{ fontSize: "3rem", margin: 0 }}>Sunray ☀️</h1>
-        <p style={{ color: "#ccc", marginTop: "8px" }}>
+        <h1 style={{ fontSize: "2.8rem", margin: 0 }}>
+          Sunray <span style={{ color: "#ffcc00" }}>☀️</span>
+        </h1>
+        <p style={{ color: "#9a9a9a", marginTop: "8px" }}>
           Solana On-Chain Insight & Analytics
         </p>
       </header>
 
       {/* HERO */}
-      <section style={{ padding: "80px 24px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.3rem", marginBottom: "16px" }}>
-          Clarity for Solana Traders
+      <section style={{ padding: "72px 24px", textAlign: "center" }}>
+        <h2 style={{ fontSize: "2.2rem", marginBottom: "14px" }}>
+          See Solana Clearly
         </h2>
         <p
           style={{
             maxWidth: "720px",
             margin: "0 auto",
             fontSize: "1.15rem",
-            color: "#ddd",
+            color: "#bdbdbd",
           }}
         >
-          Sunray delivers real-time wallet activity, momentum signals, and launch
-          analytics — all in one fast, transparent dashboard.
+          Sunray brings real-time wallet flows, momentum signals, and launch
+          analytics into one clean, transparent platform.
         </p>
       </section>
 
       {/* COUNTDOWN */}
-      <section style={{ textAlign: "center", paddingBottom: "40px" }}>
-        <h3 style={{ fontSize: "1.4rem", color: "#ffcc00" }}>
-          Platform Launch Countdown
-        </h3>
-        <p style={{ fontSize: "1.3rem", marginTop: "8px" }}>
-          {countdown}
+      <section style={{ textAlign: "center", marginBottom: "48px" }}>
+        <p style={{ color: "#ffcc00", fontSize: "1.1rem" }}>
+          Launch Countdown
         </p>
+        <h3 style={{ fontSize: "1.5rem", marginTop: "6px" }}>
+          {countdown}
+        </h3>
       </section>
 
       {/* FEATURES */}
       <section
         style={{
-          maxWidth: "900px",
+          maxWidth: "960px",
           margin: "0 auto",
-          padding: "40px 24px",
+          padding: "24px",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: "20px",
         }}
       >
         {[
-          "Live token momentum tracking",
+          "Live Solana token activity",
           "Wallet behavior insights",
-          "Early signal discovery",
-          "Launch analytics",
+          "Early momentum detection",
+          "Launch & trend analytics",
+          "Noise-free dashboard",
           "Built for Solana speed",
-          "Clean, no-noise UI",
-        ].map((feature, i) => (
+        ].map((text, i) => (
           <div
             key={i}
             style={{
-              background: "rgba(255,255,255,0.08)",
-              padding: "24px",
-              borderRadius: "12px",
-              textAlign: "center",
+              background: "#141414",
+              padding: "22px",
+              borderRadius: "10px",
+              border: "1px solid #1f1f1f",
             }}
           >
-            <p style={{ fontSize: "1.1rem" }}>{feature}</p>
+            <p style={{ margin: 0, fontSize: "1.05rem" }}>{text}</p>
           </div>
         ))}
       </section>
 
-      {/* CTA BUTTONS */}
-      <section style={{ textAlign: "center", padding: "60px 24px" }}>
+      {/* CTA */}
+      <section style={{ textAlign: "center", padding: "64px 24px" }}>
         <a
           href="https://x.com/sunrayhq"
           target="_blank"
           rel="noreferrer"
           style={{
             display: "inline-block",
-            marginRight: "16px",
+            marginRight: "14px",
             background: "#ffcc00",
             color: "#111",
-            padding: "14px 26px",
+            padding: "14px 28px",
             borderRadius: "8px",
-            fontWeight: "bold",
+            fontWeight: "600",
             textDecoration: "none",
           }}
         >
           Follow on X
         </a>
 
-        <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
+        <button
           style={{
-            display: "inline-block",
-            background: "rgba(255,255,255,0.15)",
+            background: "#1a1a1a",
             color: "#fff",
-            padding: "14px 26px",
+            padding: "14px 28px",
             borderRadius: "8px",
-            textDecoration: "none",
+            border: "1px solid #2a2a2a",
+            cursor: "default",
           }}
         >
           Dashboard Coming Soon
-        </a>
+        </button>
       </section>
 
       {/* FOOTER */}
@@ -151,8 +151,8 @@ export default function Home() {
         style={{
           padding: "24px",
           textAlign: "center",
-          borderTop: "1px solid rgba(255,255,255,0.1)",
-          color: "#aaa",
+          borderTop: "1px solid #1f1f1f",
+          color: "#777",
         }}
       >
         © {new Date().getFullYear()} Sunray
