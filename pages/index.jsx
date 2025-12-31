@@ -1,32 +1,26 @@
 export default function Home() {
   return (
-    <main
+    <div
       style={{
         minHeight: "100vh",
-        background:
-          "radial-gradient(circle at top, #0f172a 0%, #020617 60%)",
+        background: "radial-gradient(circle at top, #0f172a, #020617)",
         color: "#e5e7eb",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-        margin: 0,
+        fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
       {/* HERO */}
       <section
         style={{
-          textAlign: "center",
           padding: "120px 24px 80px",
+          textAlign: "center",
         }}
       >
         <h1
           style={{
-            fontSize: "3.75rem",
-            fontWeight: 800,
-            margin: "0 auto",
-            maxWidth: "900px",
-            background:
-              "linear-gradient(90deg, #facc15, #38bdf8, #22c55e)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            fontSize: "3.2rem",
+            fontWeight: "700",
+            color: "#7dd3fc",
+            marginBottom: "16px",
           }}
         >
           Sunray ☀️
@@ -34,26 +28,22 @@ export default function Home() {
 
         <p
           style={{
-            fontSize: "1.25rem",
-            color: "#cbd5f5",
-            marginTop: "16px",
             maxWidth: "720px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            lineHeight: 1.6,
+            margin: "0 auto 40px",
+            fontSize: "1.15rem",
+            lineHeight: "1.6",
+            color: "#cbd5f5",
           }}
         >
-          A Solana-native platform focused on clarity, transparency,
-          and real on-chain insight — built clean, fast, and intentional.
+          A Solana-native platform focused on clarity, transparency, and real
+          on-chain insight — built clean, fast, and intentional.
         </p>
 
-        {/* CTA BUTTONS */}
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
             gap: "16px",
-            marginTop: "40px",
+            justifyContent: "center",
             flexWrap: "wrap",
           }}
         >
@@ -62,15 +52,12 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background:
-                "linear-gradient(90deg, #facc15, #38bdf8)",
+              padding: "14px 28px",
+              borderRadius: "10px",
+              background: "linear-gradient(90deg, #facc15, #38bdf8)",
               color: "#020617",
-              padding: "14px 36px",
-              borderRadius: "12px",
-              fontWeight: 700,
-              fontSize: "1.05rem",
+              fontWeight: "600",
               textDecoration: "none",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
             Follow on X
@@ -81,15 +68,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              border: "1px solid rgba(255,255,255,0.15)",
+              padding: "14px 28px",
+              borderRadius: "10px",
+              border: "1px solid #334155",
               color: "#e5e7eb",
-              padding: "14px 36px",
-              borderRadius: "12px",
-              fontWeight: 700,
-              fontSize: "1.05rem",
               textDecoration: "none",
-              background: "rgba(255,255,255,0.03)",
-              backdropFilter: "blur(6px)",
             }}
           >
             Get Launch Updates
@@ -97,23 +80,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div
-        style={{
-          height: "1px",
-          background: "rgba(255,255,255,0.08)",
-          margin: "0 24px",
-        }}
-      />
-
       {/* FEATURES */}
       <section
         style={{
+          padding: "60px 24px",
           maxWidth: "1100px",
           margin: "0 auto",
-          padding: "80px 24px",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
           gap: "20px",
         }}
       >
@@ -123,32 +97,24 @@ export default function Home() {
           "Momentum & signal discovery",
           "Built specifically for Solana",
           "Launch-focused analytics (coming)",
-        ].map((text, i) => (
+        ].map((item) => (
           <div
-            key={i}
+            key={item}
             style={{
+              padding: "24px",
+              borderRadius: "14px",
               background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: "16px",
-              padding: "28px",
+              border: "1px solid rgba(255,255,255,0.06)",
               textAlign: "center",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+              fontSize: "1rem",
             }}
           >
-            <p
-              style={{
-                margin: 0,
-                fontSize: "1.05rem",
-                color: "#e5e7eb",
-              }}
-            >
-              {text}
-            </p>
+            {item}
           </div>
         ))}
       </section>
 
-      {/* PREVIEW */}
+      {/* DASHBOARD PREVIEW */}
       <section
         style={{
           padding: "80px 24px",
@@ -159,40 +125,36 @@ export default function Home() {
           style={{
             fontSize: "2rem",
             marginBottom: "12px",
+            color: "#e0f2fe",
           }}
         >
-          Platform Preview
+          Live Dashboard Preview
         </h2>
 
         <p
           style={{
             maxWidth: "720px",
-            margin: "0 auto",
-            color: "#9ca3af",
-            lineHeight: 1.6,
+            margin: "0 auto 32px",
+            color: "#94a3b8",
+            fontSize: "1.05rem",
           }}
         >
-          A conceptual look at how insights and analytics will be presented
-          once Sunray is fully live.
+          Real-time Solana signals, wallet flows, and token momentum — unified
+          into one clean interface.
         </p>
 
         <div
           style={{
-            marginTop: "36px",
-            maxWidth: "860px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            padding: "36px",
+            maxWidth: "900px",
+            margin: "0 auto",
+            padding: "40px",
             borderRadius: "18px",
-            background:
-              "linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
-            border: "1px solid rgba(255,255,255,0.12)",
-            boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
+            background: "linear-gradient(180deg, #020617, #020617)",
+            border: "1px solid #1e293b",
+            color: "#64748b",
           }}
         >
-          <p style={{ color: "#9ca3af", margin: 0 }}>
-            Real-time modules initializing…
-          </p>
+          Analytics modules syncing…
         </div>
       </section>
 
@@ -200,14 +162,14 @@ export default function Home() {
       <footer
         style={{
           padding: "32px 24px",
+          borderTop: "1px solid #1e293b",
           textAlign: "center",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-          color: "#94a3b8",
-          fontSize: "0.95rem",
+          color: "#64748b",
+          fontSize: "0.9rem",
         }}
       >
-        © {new Date().getFullYear()} Sunray — Built on Solana
+        © {new Date().getFullYear()} Sunray
       </footer>
-    </main>
+    </div>
   );
 }
