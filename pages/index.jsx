@@ -30,9 +30,10 @@ export default function Home() {
     <div
       style={{
         fontFamily: "Inter, Arial, sans-serif",
-        backgroundColor: "#0b0b0b",
-        color: "#f5f5f5",
         minHeight: "100vh",
+        background:
+          "linear-gradient(180deg, #0b1020 0%, #0f172a 60%, #020617 100%)",
+        color: "#e5e7eb",
       }}
     >
       {/* HEADER */}
@@ -40,41 +41,41 @@ export default function Home() {
         style={{
           padding: "32px",
           textAlign: "center",
-          borderBottom: "1px solid #1f1f1f",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
       >
-        <h1 style={{ fontSize: "2.8rem", margin: 0 }}>
-          Sunray <span style={{ color: "#ffcc00" }}>☀️</span>
+        <h1 style={{ fontSize: "2.9rem", margin: 0 }}>
+          Sunray <span style={{ color: "#facc15" }}>☀️</span>
         </h1>
-        <p style={{ color: "#9a9a9a", marginTop: "8px" }}>
+        <p style={{ color: "#9ca3af", marginTop: "8px" }}>
           Solana On-Chain Insight & Analytics
         </p>
       </header>
 
       {/* HERO */}
-      <section style={{ padding: "72px 24px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.2rem", marginBottom: "14px" }}>
-          See Solana Clearly
+      <section style={{ padding: "80px 24px", textAlign: "center" }}>
+        <h2 style={{ fontSize: "2.3rem", marginBottom: "16px" }}>
+          Illuminate Solana Data
         </h2>
         <p
           style={{
-            maxWidth: "720px",
+            maxWidth: "760px",
             margin: "0 auto",
             fontSize: "1.15rem",
-            color: "#bdbdbd",
+            color: "#cbd5f5",
           }}
         >
-          Sunray brings real-time wallet flows, momentum signals, and launch
-          analytics into one clean, transparent platform.
+          Sunray provides real-time wallet flows, momentum signals, and launch
+          analytics — giving traders clarity in a fast-moving Solana ecosystem.
         </p>
       </section>
 
       {/* COUNTDOWN */}
-      <section style={{ textAlign: "center", marginBottom: "48px" }}>
-        <p style={{ color: "#ffcc00", fontSize: "1.1rem" }}>
-          Launch Countdown
+      <section style={{ textAlign: "center", marginBottom: "56px" }}>
+        <p style={{ color: "#facc15", fontSize: "1.05rem" }}>
+          Platform Launch
         </p>
-        <h3 style={{ fontSize: "1.5rem", marginTop: "6px" }}>
+        <h3 style={{ fontSize: "1.6rem", marginTop: "6px" }}>
           {countdown}
         </h3>
       </section>
@@ -82,29 +83,30 @@ export default function Home() {
       {/* FEATURES */}
       <section
         style={{
-          maxWidth: "960px",
+          maxWidth: "1000px",
           margin: "0 auto",
-          padding: "24px",
+          padding: "0 24px 40px",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "20px",
+          gap: "22px",
         }}
       >
         {[
-          "Live Solana token activity",
-          "Wallet behavior insights",
+          "Live Solana token tracking",
+          "Wallet behavior analytics",
           "Early momentum detection",
-          "Launch & trend analytics",
-          "Noise-free dashboard",
-          "Built for Solana speed",
+          "Launch trend insights",
+          "Minimal, signal-focused UI",
+          "Optimized for Solana speed",
         ].map((text, i) => (
           <div
             key={i}
             style={{
-              background: "#141414",
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
               padding: "22px",
-              borderRadius: "10px",
-              border: "1px solid #1f1f1f",
+              borderRadius: "12px",
+              backdropFilter: "blur(6px)",
             }}
           >
             <p style={{ margin: 0, fontSize: "1.05rem" }}>{text}</p>
@@ -120,11 +122,11 @@ export default function Home() {
           rel="noreferrer"
           style={{
             display: "inline-block",
-            marginRight: "14px",
-            background: "#ffcc00",
-            color: "#111",
-            padding: "14px 28px",
-            borderRadius: "8px",
+            marginRight: "16px",
+            background: "#facc15",
+            color: "#111827",
+            padding: "14px 30px",
+            borderRadius: "10px",
             fontWeight: "600",
             textDecoration: "none",
           }}
@@ -134,11 +136,11 @@ export default function Home() {
 
         <button
           style={{
-            background: "#1a1a1a",
-            color: "#fff",
-            padding: "14px 28px",
-            borderRadius: "8px",
-            border: "1px solid #2a2a2a",
+            background: "rgba(255,255,255,0.08)",
+            color: "#e5e7eb",
+            padding: "14px 30px",
+            borderRadius: "10px",
+            border: "1px solid rgba(255,255,255,0.15)",
             cursor: "default",
           }}
         >
@@ -151,8 +153,8 @@ export default function Home() {
         style={{
           padding: "24px",
           textAlign: "center",
-          borderTop: "1px solid #1f1f1f",
-          color: "#777",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          color: "#9ca3af",
         }}
       >
         © {new Date().getFullYear()} Sunray
