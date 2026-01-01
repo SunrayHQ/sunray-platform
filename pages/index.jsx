@@ -1,12 +1,14 @@
+"use client";
+
 export default function Home() {
   return (
-    <div
+    <main
       style={{
-        fontFamily: "Inter, Arial, sans-serif",
         minHeight: "100vh",
         background:
-          "linear-gradient(180deg, #0b1020 0%, #0f172a 60%, #020617 100%)",
+          "radial-gradient(circle at top, #1e3a8a 0%, #020617 60%)",
         color: "#e5e7eb",
+        fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
       {/* HEADER */}
@@ -14,41 +16,41 @@ export default function Home() {
         style={{
           padding: "32px",
           textAlign: "center",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
         }}
       >
-        <h1 style={{ fontSize: "2.9rem", margin: 0 }}>
-          Sunray <span style={{ color: "#facc15" }}>☀️</span>
+        <h1 style={{ fontSize: "36px", fontWeight: 700 }}>
+          Sunray ☀️
         </h1>
-        <p style={{ color: "#9ca3af", marginTop: "8px" }}>
+        <p style={{ opacity: 0.8 }}>
           Solana On-Chain Insight & Analytics
         </p>
       </header>
 
       {/* HERO */}
-      <section style={{ padding: "80px 24px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2.3rem", marginBottom: "16px" }}>
+      <section
+        style={{
+          textAlign: "center",
+          padding: "60px 20px 40px",
+          maxWidth: "900px",
+          margin: "0 auto",
+        }}
+      >
+        <h2 style={{ fontSize: "40px", marginBottom: "16px" }}>
           Clarity for Solana Markets
         </h2>
-        <p
-          style={{
-            maxWidth: "760px",
-            margin: "0 auto",
-            fontSize: "1.15rem",
-            color: "#cbd5f5",
-          }}
-        >
-          Sunray delivers real-time wallet activity, momentum signals, and launch
-          insights — designed to help traders move with confidence on Solana.
+        <p style={{ opacity: 0.85, lineHeight: 1.6 }}>
+          Sunray delivers real-time wallet activity, momentum signals,
+          and launch insights — designed to help traders move with
+          confidence on Solana.
         </p>
       </section>
 
       {/* FEATURES */}
       <section
         style={{
-          maxWidth: "1000px",
+          maxWidth: "1100px",
           margin: "0 auto",
-          padding: "0 24px 40px",
+          padding: "20px",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: "22px",
@@ -80,73 +82,97 @@ export default function Home() {
             desc: "Optimized for speed, scale, and Solana-native performance.",
           },
         ].map((item, i) => (
-          <div
+          <button
             key={i}
+            onClick={() =>
+              alert(`${item.title} — platform live.`)
+            }
             style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
+              textAlign: "left",
+              background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(255,255,255,0.1)",
               padding: "22px",
-              borderRadius: "12px",
-              backdropFilter: "blur(6px)",
+              borderRadius: "14px",
+              cursor: "pointer",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.borderColor = "#38bdf8";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.borderColor =
+                "rgba(255,255,255,0.1)";
             }}
           >
-            <h3 style={{ margin: "0 0 8px", color: "#facc15" }}>
+            <h3
+              style={{
+                margin: "0 0 8px",
+                color: "#facc15",
+              }}
+            >
               {item.title}
             </h3>
-            <p style={{ margin: 0, color: "#cbd5f5" }}>{item.desc}</p>
-          </div>
+            <p style={{ margin: 0, opacity: 0.85 }}>
+              {item.desc}
+            </p>
+          </button>
         ))}
       </section>
 
       {/* CTA */}
-      <section style={{ textAlign: "center", padding: "64px 24px" }}>
+      <section
+        style={{
+          textAlign: "center",
+          padding: "60px 20px",
+        }}
+      >
         <a
           href="https://x.com/sunrayhq"
           target="_blank"
-          rel="noreferrer"
           style={{
             display: "inline-block",
-            marginRight: "16px",
             background: "#facc15",
-            color: "#111827",
-            padding: "14px 30px",
-            borderRadius: "10px",
-            fontWeight: "600",
+            color: "#020617",
+            padding: "14px 26px",
+            borderRadius: "999px",
+            fontWeight: 600,
+            marginRight: "12px",
             textDecoration: "none",
           }}
         >
           Follow on X
         </a>
 
-        <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
+        <button
+          onClick={() =>
+            alert("Platform is live. Stay tuned.")
+          }
           style={{
-            display: "inline-block",
-            background: "rgba(255,255,255,0.08)",
+            background: "rgba(255,255,255,0.1)",
             color: "#e5e7eb",
-            padding: "14px 30px",
-            borderRadius: "10px",
-            border: "1px solid rgba(255,255,255,0.15)",
-            textDecoration: "none",
-            cursor: "default",
+            padding: "14px 26px",
+            borderRadius: "999px",
+            border: "1px solid rgba(255,255,255,0.2)",
+            cursor: "pointer",
           }}
         >
           Platform Live
-        </a>
+        </button>
       </section>
 
       {/* FOOTER */}
       <footer
         style={{
-          padding: "24px",
           textAlign: "center",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-          color: "#9ca3af",
+          padding: "24px",
+          opacity: 0.5,
+          fontSize: "14px",
         }}
       >
-        © {new Date().getFullYear()} Sunray • Built on Solana
+        © {new Date().getFullYear()} Sunray
       </footer>
-    </div>
+    </main>
   );
 }
