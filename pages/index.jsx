@@ -1,31 +1,4 @@
-import { useEffect, useState } from "react";
-
 export default function Home() {
-  const [countdown, setCountdown] = useState("");
-
-  useEffect(() => {
-    const launchDate = new Date("January 2, 2026").getTime();
-
-    const interval = setInterval(() => {
-      const now = Date.now();
-      const diff = launchDate - now;
-
-      if (diff <= 0) {
-        setCountdown("Launching Soon");
-        clearInterval(interval);
-        return;
-      }
-
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const m = Math.floor((diff / (1000 * 60)) % 60);
-
-      setCountdown(`${d}d ${h}h ${m}m`);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       style={{
@@ -55,7 +28,7 @@ export default function Home() {
       {/* HERO */}
       <section style={{ padding: "80px 24px", textAlign: "center" }}>
         <h2 style={{ fontSize: "2.3rem", marginBottom: "16px" }}>
-          Illuminate Solana Data
+          Clarity for Solana Markets
         </h2>
         <p
           style={{
@@ -65,19 +38,9 @@ export default function Home() {
             color: "#cbd5f5",
           }}
         >
-          Sunray provides real-time wallet flows, momentum signals, and launch
-          analytics — giving traders clarity in a fast-moving Solana ecosystem.
+          Sunray delivers real-time wallet activity, momentum signals, and launch
+          insights — designed to help traders move with confidence on Solana.
         </p>
-      </section>
-
-      {/* COUNTDOWN */}
-      <section style={{ textAlign: "center", marginBottom: "56px" }}>
-        <p style={{ color: "#facc15", fontSize: "1.05rem" }}>
-          Platform Launch
-        </p>
-        <h3 style={{ fontSize: "1.6rem", marginTop: "6px" }}>
-          {countdown}
-        </h3>
       </section>
 
       {/* FEATURES */}
@@ -92,13 +55,31 @@ export default function Home() {
         }}
       >
         {[
-          "Live Solana token tracking",
-          "Wallet behavior analytics",
-          "Early momentum detection",
-          "Launch trend insights",
-          "Minimal, signal-focused UI",
-          "Optimized for Solana speed",
-        ].map((text, i) => (
+          {
+            title: "Live Token Tracking",
+            desc: "Monitor Solana token activity and market movement in real time.",
+          },
+          {
+            title: "Wallet Intelligence",
+            desc: "Understand wallet behavior, flows, and conviction with clarity.",
+          },
+          {
+            title: "Momentum Signals",
+            desc: "Surface early momentum before it becomes obvious to the crowd.",
+          },
+          {
+            title: "Launch Analytics",
+            desc: "Analyze new launches with clean, transparent data.",
+          },
+          {
+            title: "Signal-First Design",
+            desc: "No noise. No clutter. Just what matters.",
+          },
+          {
+            title: "Built for Solana",
+            desc: "Optimized for speed, scale, and Solana-native performance.",
+          },
+        ].map((item, i) => (
           <div
             key={i}
             style={{
@@ -109,7 +90,10 @@ export default function Home() {
               backdropFilter: "blur(6px)",
             }}
           >
-            <p style={{ margin: 0, fontSize: "1.05rem" }}>{text}</p>
+            <h3 style={{ margin: "0 0 8px", color: "#facc15" }}>
+              {item.title}
+            </h3>
+            <p style={{ margin: 0, color: "#cbd5f5" }}>{item.desc}</p>
           </div>
         ))}
       </section>
@@ -134,18 +118,22 @@ export default function Home() {
           Follow on X
         </a>
 
-        <button
+        <a
+          href="#"
+          onClick={(e) => e.preventDefault()}
           style={{
+            display: "inline-block",
             background: "rgba(255,255,255,0.08)",
             color: "#e5e7eb",
             padding: "14px 30px",
             borderRadius: "10px",
             border: "1px solid rgba(255,255,255,0.15)",
+            textDecoration: "none",
             cursor: "default",
           }}
         >
-          Dashboard Coming Soon
-        </button>
+          Platform Live
+        </a>
       </section>
 
       {/* FOOTER */}
@@ -157,7 +145,7 @@ export default function Home() {
           color: "#9ca3af",
         }}
       >
-        © {new Date().getFullYear()} Sunray
+        © {new Date().getFullYear()} Sunray • Built on Solana
       </footer>
     </div>
   );
