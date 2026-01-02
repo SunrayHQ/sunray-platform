@@ -4,12 +4,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sunray — Solana On-Chain Insight</title>
+        <title>Sunray — Solana Market Intelligence</title>
         <meta
           name="description"
-          content="Sunray provides real-time Solana wallet intelligence, momentum signals, and launch analytics — built for clarity."
+          content="Sunray is a Solana-native platform delivering on-chain insight, wallet intelligence, and momentum signals."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main style={styles.page}>
@@ -18,19 +17,23 @@ export default function Home() {
           <h1 style={styles.logo}>
             Sunray <span style={styles.sun}>☀️</span>
           </h1>
-          <p style={styles.tagline}>Solana On-Chain Insight & Analytics</p>
+          <p style={styles.subtitle}>
+            Solana On-Chain Insight & Market Intelligence
+          </p>
         </header>
 
         {/* Hero */}
         <section style={styles.hero}>
-          <h2 style={styles.heroTitle}>Clarity for Solana Markets</h2>
+          <h2 style={styles.heroTitle}>
+            Clarity for Solana Markets
+          </h2>
           <p style={styles.heroText}>
-            Sunray surfaces real-time wallet activity, momentum signals, and
-            launch-focused analytics — designed to help traders move early and
-            with confidence on Solana.
+            Sunray is a Solana-native analytics platform focused on transparency,
+            momentum discovery, and clean on-chain signals — built for traders
+            who value clarity over noise.
           </p>
 
-          <div style={styles.ctaRow}>
+          <div style={styles.buttons}>
             <a
               href="https://x.com/sunrayhq"
               target="_blank"
@@ -51,35 +54,75 @@ export default function Home() {
 
         {/* Features */}
         <section style={styles.features}>
-          {FEATURES.map((f) => (
-            <div key={f.title} style={styles.card}>
-              <h3 style={styles.cardTitle}>{f.title}</h3>
-              <p style={styles.cardText}>{f.text}</p>
+          {FEATURES.map((item) => (
+            <div key={item.title} style={styles.card}>
+              <h3 style={styles.cardTitle}>{item.title}</h3>
+              <p style={styles.cardText}>{item.text}</p>
             </div>
           ))}
         </section>
 
-        {/* Bottom CTA */}
-        <section style={styles.bottom}>
-          <h3 style={styles.bottomTitle}>Built for Solana. Built for Signal.</h3>
-          <p style={styles.bottomText}>
-            No noise. No clutter. Just clean on-chain insight when it matters.
+        {/* Platform Preview */}
+        <section style={styles.previewSection}>
+          <h3 style={styles.sectionTitle}>Platform Preview</h3>
+          <p style={styles.sectionText}>
+            Below is a visual preview of the Sunray interface. Live modules are
+            actively being developed and will roll out in stages.
           </p>
 
-          <a
-            href="https://x.com/sunrayhq"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ ...styles.button, ...styles.primary }}
-          >
-            Stay Locked In
-          </a>
+          <div style={styles.previewBox}>
+            <p style={styles.previewText}>
+              Wallet flows • Token momentum • Signal discovery
+            </p>
+            <p style={styles.previewSub}>
+              Live analytics syncing…
+            </p>
+          </div>
+        </section>
+
+        {/* What's Next */}
+        <section style={styles.nextSection}>
+          <h3 style={styles.sectionTitle}>What’s Next</h3>
+          <ul style={styles.list}>
+            <li>• Continued platform development post-launch</li>
+            <li>• Wallet intelligence and signal dashboards</li>
+            <li>• Token and launch analytics modules</li>
+            <li>• Community-driven feature expansion</li>
+          </ul>
+        </section>
+
+        {/* Roadmap */}
+        <section style={styles.roadmap}>
+          <h3 style={styles.sectionTitle}>Roadmap</h3>
+
+          <div style={styles.roadmapGrid}>
+            <div style={styles.roadmapItem}>
+              <strong>Phase 1</strong>
+              <p>Platform foundation & interface</p>
+            </div>
+            <div style={styles.roadmapItem}>
+              <strong>Phase 2</strong>
+              <p>Wallet tracking & signal tooling</p>
+            </div>
+            <div style={styles.roadmapItem}>
+              <strong>Phase 3</strong>
+              <p>Token analytics & launch insights</p>
+            </div>
+            <div style={styles.roadmapItem}>
+              <strong>Phase 4</strong>
+              <p>Community tools & integrations</p>
+            </div>
+          </div>
         </section>
 
         {/* Footer */}
         <footer style={styles.footer}>
-          <p>© {new Date().getFullYear()} Sunray</p>
-          <p>Solana-native analytics</p>
+          <p style={styles.footerText}>
+            Built for Solana • Built for clarity
+          </p>
+          <p style={styles.footerSub}>
+            © {new Date().getFullYear()} Sunray
+          </p>
         </footer>
       </main>
     </>
@@ -88,28 +131,28 @@ export default function Home() {
 
 const FEATURES = [
   {
-    title: "Live Token Tracking",
-    text: "Monitor Solana token activity and real-time market movement.",
+    title: "Live Token Activity",
+    text: "Track real-time Solana token movement and emerging momentum.",
   },
   {
     title: "Wallet Intelligence",
-    text: "Track wallet behavior, flows, and conviction across the chain.",
+    text: "Understand wallet behavior, flows, and conviction patterns.",
   },
   {
     title: "Momentum Signals",
-    text: "Surface early momentum before it becomes obvious.",
+    text: "Surface early signals before trends become obvious.",
   },
   {
     title: "Launch Analytics",
-    text: "Analyze new launches with clean, transparent on-chain data.",
+    text: "Clean insights into new launches and on-chain activity.",
   },
   {
     title: "Signal-First Design",
-    text: "No noise. No clutter. Only what matters.",
+    text: "No clutter. No noise. Just actionable information.",
   },
   {
-    title: "Built for Solana",
-    text: "Optimized for speed, scale, and Solana-native performance.",
+    title: "Solana Native",
+    text: "Optimized for Solana speed, scale, and performance.",
   },
 ];
 
@@ -117,11 +160,10 @@ const styles = {
   page: {
     minHeight: "100vh",
     background:
-      "radial-gradient(circle at top, #0b1d3a 0%, #020617 65%)",
+      "radial-gradient(circle at top, #0f172a 0%, #020617 65%)",
     color: "#e6edf7",
-    fontFamily:
-      "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
-    padding: "48px 20px",
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont",
+    padding: "48px 24px",
   },
   header: {
     textAlign: "center",
@@ -130,44 +172,41 @@ const styles = {
   logo: {
     fontSize: "42px",
     fontWeight: "700",
-    marginBottom: "6px",
   },
   sun: {
     color: "#38bdf8",
   },
-  tagline: {
-    fontSize: "14px",
+  subtitle: {
     color: "#9fb3c8",
+    fontSize: "14px",
   },
   hero: {
-    maxWidth: "920px",
-    margin: "0 auto 90px",
+    maxWidth: "900px",
+    margin: "0 auto 80px",
     textAlign: "center",
   },
   heroTitle: {
-    fontSize: "38px",
+    fontSize: "36px",
     marginBottom: "16px",
     color: "#f8fafc",
-    textShadow: "0 0 18px rgba(56,189,248,0.25)",
   },
   heroText: {
     fontSize: "16px",
     lineHeight: "1.6",
     color: "#dbe4f3",
-    marginBottom: "36px",
+    marginBottom: "32px",
   },
-  ctaRow: {
+  buttons: {
     display: "flex",
     justifyContent: "center",
     gap: "16px",
     flexWrap: "wrap",
   },
   button: {
-    padding: "12px 24px",
-    borderRadius: "12px",
-    fontWeight: "600",
+    padding: "12px 22px",
+    borderRadius: "10px",
     textDecoration: "none",
-    transition: "all 0.25s ease",
+    fontWeight: "600",
   },
   primary: {
     background: "linear-gradient(90deg, #facc15, #38bdf8)",
@@ -178,48 +217,89 @@ const styles = {
     color: "#e6edf7",
   },
   features: {
-    maxWidth: "1120px",
-    margin: "0 auto 100px",
+    maxWidth: "1100px",
+    margin: "0 auto 80px",
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: "22px",
+    gap: "20px",
   },
   card: {
     background: "rgba(255,255,255,0.07)",
     border: "1px solid rgba(255,255,255,0.14)",
-    borderRadius: "16px",
-    padding: "24px",
-    boxShadow: "0 14px 34px rgba(0,0,0,0.45)",
+    borderRadius: "14px",
+    padding: "22px",
   },
   cardTitle: {
-    fontSize: "16px",
     color: "#facc15",
     marginBottom: "8px",
+    fontSize: "16px",
   },
   cardText: {
     fontSize: "14px",
-    lineHeight: "1.55",
-    color: "#e6edf7",
+    lineHeight: "1.5",
   },
-  bottom: {
+  previewSection: {
+    maxWidth: "900px",
+    margin: "0 auto 80px",
     textAlign: "center",
-    maxWidth: "760px",
+  },
+  sectionTitle: {
+    fontSize: "24px",
+    marginBottom: "12px",
+  },
+  sectionText: {
+    color: "#cbd5e1",
+    marginBottom: "24px",
+  },
+  previewBox: {
+    background: "#020617",
+    border: "1px solid rgba(255,255,255,0.14)",
+    borderRadius: "14px",
+    padding: "32px",
+  },
+  previewText: {
+    fontSize: "16px",
+    marginBottom: "8px",
+  },
+  previewSub: {
+    fontSize: "13px",
+    color: "#9fb3c8",
+  },
+  nextSection: {
+    maxWidth: "900px",
     margin: "0 auto 80px",
   },
-  bottomTitle: {
-    fontSize: "28px",
-    marginBottom: "10px",
+  list: {
+    listStyle: "none",
+    padding: 0,
+    color: "#dbe4f3",
+    lineHeight: "1.8",
   },
-  bottomText: {
-    fontSize: "14px",
-    color: "#cbd5e1",
-    marginBottom: "26px",
+  roadmap: {
+    maxWidth: "900px",
+    margin: "0 auto 80px",
+  },
+  roadmapGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gap: "16px",
+  },
+  roadmapItem: {
+    background: "rgba(255,255,255,0.06)",
+    border: "1px solid rgba(255,255,255,0.12)",
+    borderRadius: "12px",
+    padding: "18px",
   },
   footer: {
+    textAlign: "center",
     borderTop: "1px solid rgba(255,255,255,0.08)",
     paddingTop: "24px",
-    textAlign: "center",
-    fontSize: "12px",
+  },
+  footerText: {
+    fontSize: "13px",
+  },
+  footerSub: {
+    fontSize: "11px",
     color: "#9fb3c8",
   },
 };
